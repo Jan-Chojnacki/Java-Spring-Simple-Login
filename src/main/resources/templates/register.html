@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Register</title>
 </head>
 <body>
-$END$
+<nav>
+    <ul>
+        <li><a th:href="@{/login}">Login</a></li>
+        <li><a th:href="@{/register}">Register</a></li>
+    </ul>
+</nav>
+<form th:action="@{/register}" th:object="${user}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" th:field="*{username}" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" th:field="*{password}" required>
+    <label for="user">USER</label>
+    <input type="checkbox" id="user" name="roles" value="ROLE_USER">
+    <label for="admin">ADMIN</label>
+    <input type="checkbox" id="admin" name="roles" value="ROLE_ADMIN">
+    <input type="submit" value="Register">
+</form>
 </body>
 </html>
