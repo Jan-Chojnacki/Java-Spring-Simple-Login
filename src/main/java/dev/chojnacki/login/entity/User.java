@@ -10,10 +10,6 @@ import java.util.Set;
 
 @Data
 @Entity(name = "users")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue
